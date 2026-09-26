@@ -55,6 +55,7 @@ jobs:
           ${{ steps.version_info.outputs.version_info }}
         draft: true
         prerelease: false
+
   
   build-aseprite:
     name: Build Aseprite
