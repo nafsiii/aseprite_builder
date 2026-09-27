@@ -7,7 +7,6 @@ on:
       - master
 
 env:
-  BUILD_TYPE: Release
   SKIA_VERSION: m124-08a5439a6b
 
 jobs:
@@ -123,7 +122,7 @@ jobs:
             -S . `
             -B build `
             -G Ninja `
-            -DCMAKE_BUILD_TYPE=$env:BUILD_TYPE `
+            -DCMAKE_BUILD_TYPE=Release `
             -DCMAKE_POLICY_DEFAULT_CMP0074=NEW `
             -DCMAKE_POLICY_DEFAULT_CMP0091=NEW `
             -DCMAKE_POLICY_DEFAULT_CMP0092=NEW `
