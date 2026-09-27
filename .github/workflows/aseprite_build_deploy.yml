@@ -132,7 +132,8 @@ jobs:
             -DLAF_BACKEND=skia `
             -DSKIA_DIR="$env:GITHUB_WORKSPACE\skia" `
             -DSKIA_LIBRARY_DIR="$env:GITHUB_WORKSPACE\skia\out\Release-x64" `
-            -DSKIA_OPENGL_LIBRARY=
+            -DSKIA_LIBRARY="$env:GITHUB_WORKSPACE\skia\out\Release-x64\skia.lib" `
+            -DCMAKE_EXE_LINKER_FLAGS="opengl32.lib"
 
       # ---------------------------------------------------------
       # 7. Compile Aseprite
